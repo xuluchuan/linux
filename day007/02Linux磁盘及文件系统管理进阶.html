@@ -1,0 +1,1707 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><title>02Linux磁盘及文件系统管理进阶</title></head><body><article class="markdown-body"><h1 id="linux">Linux磁盘及文件系统管理进阶<a class="headerlink" href="#linux" title="Permanent link"></a></h1>
+<h3 id="_1">查看系统信息<a class="headerlink" href="#_1" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>[root@localhost ~]# cat /etc/issue
+CentOS release 6.9 (Final)
+Kernel \r on an \m
+[root@localhost ~]# cat /etc/issue
+\S
+Kernel \r on an \m
+[root@localhost ~]# cat /etc/redhat-release
+CentOS release 6.9 (Final)
+[root@localhost ~]# cat /etc/redhat-release
+CentOS Linux release 7.4.1708 (Core)
+</pre></div>
+
+<h3 id="_2">查看内核信息<a class="headerlink" href="#_2" title="Permanent link"></a></h3>
+<div class="codehilite"><pre>[root@localhost ~]# uname -r
+2.6.32-696.el6.x86_64
+[root@localhost ~]# uname -r
+3.10.0-693.el7.x86_64
+</pre></div>
+
+<h3 id="_3">内核级文件系统<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
+<ul>
+<li>内核级文件系统的组成部分：由内核提供文件系统驱动</li>
+<li>centos6默认是ext4</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# lsmod|grep ext4
+ext4 381065 2
+jbd2 93284 1 ext4
+mbcache 8193 1 ext4
+</pre></div>
+
+<ul>
+<li>centos7默认是xfs</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# lsmod|grep xfs
+xfs 978100 2
+libcrc32c 12644 1 xfs
+</pre></div>
+
+<h3 id="_4">管理工具：用户空间的应用程序<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<h4 id="_5">创建文件系统工具<a class="headerlink" href="#_5" title="Permanent link"></a></h4>
+<ul>
+<li>mkfs -t ext2/3/4 xfs</li>
+<li>mkfs.ext2/3/4 DEVICE ext系列专用 </li>
+<li>mkfs.xfs xfs专用</li>
+<li>centos6安装xfs，yum -y install xfsprogs</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# mkfs.ext3 /dev/sdb1 
+[root@localhost ~]# mkfs.xfs -f /dev/sdb1
+[root@localhost ~]# mkfs.ext4 /dev/sdb1
+</pre></div>
+
+<h4 id="ext">ext系列专用工具<a class="headerlink" href="#ext" title="Permanent link"></a></h4>
+<ul>
+<li>mke2fs <ul>
+<li>-t {ext2|ext3|ext4} 指明类型，默认ext2</li>
+<li>-b {1024|2048|4096} :默认4096，指明文件系统块大小</li>
+<li>-L LABEL 指明卷标</li>
+<li>-j 启动日志，ext3</li>
+<li>-i # ： 指明多少字节一个inode，inode/block比</li>
+<li>-N：指明inode数</li>
+<li>-O：指明文件系统特性，如has_journal ^取消特性</li>
+<li>-m # :指定预留空间百分比 默认5%</li>
+</ul>
+</li>
+<li>e2label 卷标管理<ul>
+<li>e2label DEVICE LABEL 不加LABEL是查看，加上是设置</li>
+</ul>
+</li>
+<li>tune2fs 查看和调整ext系列某些属性<ul>
+<li>-l查看超级块信息 FileSystem state：clean 或dirty</li>
+<li>-j 开启日志，ext2升级为ext3</li>
+<li>-L 设定卷标</li>
+<li>-m # ：指定预留空间百分比 </li>
+<li>-O：调整文件系统特性</li>
+<li>-o：调整默认挂载属性 tune2fs -o acl</li>
+</ul>
+</li>
+<li>dumpe2fs 显示ext系列文件系统属性信息<ul>
+<li>-h：仅显示超级块信息</li>
+</ul>
+</li>
+<li>e2fsck：文件系统检测与修复<ul>
+<li>-y：所有问题回答yes</li>
+<li>-f：clean状态也修复</li>
+</ul>
+</li>
+</ul>
+<h4 id="xfs_admin">xfs_admin基本用法：<a class="headerlink" href="#xfs_admin" title="Permanent link"></a></h4>
+<div class="codehilite"><pre>1
+xfs_admin -l /dev/sda3   #查看xfs格式文件系统的卷标
+2
+xfs_admin -L linux /dev/sda3  #设置xfs格式文件系统的卷标为linux
+3
+xfs_admin -l /dev/sda3  #再次查看xfs格式文件系统的卷标
+</pre></div>
+
+<div class="codehilite"><pre>[root@localhost ~]# blkid /dev/sdb1
+/dev/sdb1: UUID=&quot;2b860243-f205-428e-8cb8-454c93411b06&quot; TYPE=&quot;ext4&quot;
+[root@localhost ~]# e2label /dev/sdb1 MYDATA
+[root@localhost ~]# blkid /dev/sdb1
+/dev/sdb1: LABEL=&quot;MYDATA&quot; UUID=&quot;2b860243-f205-428e-8cb8-454c93411b06&quot; TYPE=&quot;ext4&quot;
+[root@localhost ~]# tune2fs -l /dev/sdb1
+tune2fs 1.42.9 (28-Dec-2013)
+Filesystem volume name: MYDATA
+Last mounted on: &lt;not available&gt;
+Filesystem UUID: 2b860243-f205-428e-8cb8-454c93411b06
+Filesystem magic number: 0xEF53
+Filesystem revision #: 1 (dynamic)
+Filesystem features: has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file uninit_bg dir_nlink extra_isize
+Filesystem flags: signed_directory_hash
+Default mount options: user_xattr acl
+Filesystem state: clean
+Errors behavior: Continue
+Filesystem OS type: Linux
+Inode count: 131072
+Block count: 524288
+Reserved block count: 26214
+Free blocks: 498132
+Free inodes: 131061
+First block: 0
+Block size: 4096
+Fragment size: 4096
+Group descriptor size: 64
+Reserved GDT blocks: 255
+Blocks per group: 32768
+Fragments per group: 32768
+Inodes per group: 8192
+Inode blocks per group: 512
+Flex block group size: 16
+Filesystem created: Fri Jun 1 11:49:17 2018
+Last mount time: n/a
+Last write time: Fri Jun 1 12:37:35 2018
+Mount count: 0
+Maximum mount count: -1
+Last checked: Fri Jun 1 11:49:17 2018
+Check interval: 0 (&lt;none&gt;)
+Lifetime writes: 65 MB
+Reserved blocks uid: 0 (user root)
+Reserved blocks gid: 0 (group root)
+First inode: 11
+Inode size: 256
+Required extra isize: 28
+Desired extra isize: 28
+Journal inode: 8
+Default directory hash: half_md4
+Directory Hash Seed: d080298d-e97d-4ae7-b63c-b07ece2382d3
+Journal backup: inode blocks
+</pre></div>
+
+<h3 id="_6">文件系统检测修复工具<a class="headerlink" href="#_6" title="Permanent link"></a></h3>
+<ul>
+<li>fsck，当进程意外中止或系统崩溃，导致写入操作非正常终止，文件可能损坏，此时应该离线检测文件系统<ul>
+<li>-t FSTYPE 或fsck.FSTYPE</li>
+<li>-a 自动修复所有错误</li>
+<li>-r 交互式修复</li>
+</ul>
+</li>
+</ul>
+<h3 id="blkid">blkid命令<a class="headerlink" href="#blkid" title="Permanent link"></a></h3>
+<ul>
+<li>blkid DEVICE 查找属性</li>
+<li>-L 卷标 查找卷标对应的设备</li>
+<li>-U UUID 查找UUID对应的设备</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# blkid /dev/sdb2
+/dev/sdb2: UUID=&quot;3ea8533f-f7b9-4552-87b1-ae3591c37200&quot; TYPE=&quot;swap&quot;
+</pre></div>
+
+<h3 id="swap">swap文件系统<a class="headerlink" href="#swap" title="Permanent link"></a></h3>
+<ul>
+<li>必须使用独立的文件系统</li>
+<li>创建swap需要修改id为82</li>
+<li>使用mkswap DEVICE     </li>
+<li>用mkswap -L 命令可以给一个swap设卷标。</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# fdisk -l /dev/sdb
+Disk /dev/sdb: 8589 MB, 8589934592 bytes, 16777216 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x519a8c05
+   Device Boot Start End Blocks Id System
+/dev/sdb1 2048 4196351 2097152 83 Linux
+/dev/sdb2 4196352 8390655 2097152 82 Linux swap / Solaris
+[root@localhost ~]# mkswap -L MYSWAP /dev/sdb2
+mkswap: /dev/sdb2: warning: wiping old swap signature.
+Setting up swapspace version 1, size = 2097148 KiB
+LABEL=MYSWAP, UUID=7559abfb-138f-44d7-9497-e28f42ac70b4
+</pre></div>
+
+<h3 id="u">U盘<a class="headerlink" href="#u" title="Permanent link"></a></h3>
+<ul>
+<li>只有vfat（fat32）格式才能在windows和linux上交叉使用</li>
+<li>使用mkfs.vfat创建u盘文件系统</li>
+</ul>
+<h3 id="mount-point">挂载点（mount point）<a class="headerlink" href="#mount-point" title="Permanent link"></a></h3>
+<ul>
+<li>挂载点是其他文件系统的访问入口，若其他文件系统要能访问，需要关联到根文件系统中的某个目录中，此关联为挂载，此目录为挂载点，挂载点是实现存在的目录，挂载后挂载点原有的文件会隐藏</li>
+<li>挂载：mount OPTIONS -t FSTYPE -o OPTIONS DEVICE DIR</li>
+<li>查看已挂载文件系统：cat /etc/mtab 或 mount </li>
+<li>卸载：umount DEVICE 或 MOUNT POINT</li>
+<li>挂载完后正在被进程访问到的挂载点无法被卸载</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# mount /dev/sdb1 /mnt/
+[root@localhost ~]# ls /mnt/
+lost+found
+[root@localhost ~]# cat /etc/mtab
+rootfs / rootfs rw 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+devtmpfs /dev devtmpfs rw,nosuid,size=240356k,nr_inodes=60089,mode=755 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0
+tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0
+cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0
+cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0
+cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0
+cgroup /sys/fs/cgroup/net_cls,net_prio cgroup rw,nosuid,nodev,noexec,relatime,net_prio,net_cls 0 0
+cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpuacct,cpu 0 0
+cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0
+cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0
+cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0
+cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0
+cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
+/dev/sda3 / xfs rw,relatime,attr2,inode64,noquota 0 0
+systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=11725 0 0
+hugetlbfs /dev/hugepages hugetlbfs rw,relatime 0 0
+mqueue /dev/mqueue mqueue rw,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+/dev/sda1 /boot xfs rw,relatime,attr2,inode64,noquota 0 0
+tmpfs /run/user/0 tmpfs rw,nosuid,nodev,relatime,size=50004k,mode=700 0 0
+/dev/sdb1 /mnt ext4 rw,relatime,data=ordered 0 0
+[root@localhost ~]# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,size=240356k,nr_inodes=60089,mode=755)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio,net_cls)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct,cpu)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+/dev/sda3 on / type xfs (rw,relatime,attr2,inode64,noquota)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=11725)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime)
+mqueue on /dev/mqueue type mqueue (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+/dev/sda1 on /boot type xfs (rw,relatime,attr2,inode64,noquota)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=50004k,mode=700)
+/dev/sdb1 on /mnt type ext4 (rw,relatime,data=ordered)
+[root@localhost ~]# umount /mnt
+</pre></div>
+
+<h3 id="_7">挂载选项<a class="headerlink" href="#_7" title="Permanent link"></a></h3>
+<ul>
+<li>-r：只读挂载</li>
+<li>-w：读写挂载，默认</li>
+<li>-n：禁止更新mtab，默认会更新mtab</li>
+<li>-t：文件系统类型，默认会根据blkid自动找到类型</li>
+<li>-L LABEL：以卷标挂载</li>
+<li>-U UUID：以UUID挂载</li>
+<li>-o：挂载后文件系统特性<ul>
+<li>async/sync 异步/同步：async默认性能好，先在内存中，稍后同步到磁盘</li>
+<li>atime/noatime 更新atime/不更新atime：不更新atime性能好</li>
+<li>diratime/nodiratime 开启目录更新atime/只关闭目录更新atime</li>
+<li>remount：重新挂载</li>
+<li>acl：启用acl功能，默认不启用</li>
+<li>已经挂载后修改为acl：mount -o remount,acl DEVICE MOUNT POINT</li>
+<li>ro：只读</li>
+<li>rw：读写，默认</li>
+<li>dev/nodev：是否允许创建设备文件，默认允许</li>
+<li>exec/noexec：是否允许运行此设备的可执行文件，默认允许</li>
+<li>suid/nosuid：是否允许开启suid，默认允许</li>
+<li>auto/noauto：是否允许mount -a挂载，默认允许</li>
+<li>user/nouser：是否允许普通用户挂载，默认不允许</li>
+<li>defaults：rw suid dev exec auto nouser async relatime</li>
+</ul>
+</li>
+<li>&ndash;bind：将一个目录绑定到另一个目录上，实现临时访问<ul>
+<li>mount &ndash;bind /etc /mnt</li>
+<li>umount /mnt</li>
+</ul>
+</li>
+<li>挂载光盘<ul>
+<li>mount -r /dev/cdrom /media/cdrom</li>
+</ul>
+</li>
+<li>挂载U盘<ul>
+<li>mount -o noexec DEVICE /media/udisk</li>
+</ul>
+</li>
+<li>无法卸载时，查看哪个进程占用<ol>
+<li>lsof /mnt</li>
+<li>fuser -v /mnt</li>
+<li>终止进程：fuser -km /mnt</li>
+</ol>
+</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# yum -y install psmisc lsof
+[root@localhost ~]# lsof /mydata/
+COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
+bash 1961 root cwd DIR 8,17 2048 2 /mydata
+[root@localhost ~]# fuser -v /mydata/
+                     USER PID ACCESS COMMAND
+/mydata: root kernel mount /mydata
+                     root 1961 ..c.. bash
+[root@localhost ~]# fuser -km /mydata/
+/mydata: 1961c
+[root@localhost ~]# fuser -v /mydata/
+                     USER PID ACCESS COMMAND
+/mydata: root kernel mount /mydata
+[root@localhost ~]# lsof /mydata/
+[root@localhost ~]# umount /mydata/
+</pre></div>
+
+<ul>
+<li>挂载本地回环设备（iso镜像，img镜像）<ul>
+<li>mount -t iso9660 -o loop,ro ISOFILE /mnt</li>
+</ul>
+</li>
+<li>启用交换分区<ul>
+<li>创建mkswap DEVICE</li>
+<li>启用：swapon DEVICE</li>
+<li>禁用：swapoff DEVICE</li>
+<li>启用所有在/etc/fstab上的swap设备：swapon -a</li>
+</ul>
+</li>
+</ul>
+<h3 id="etcfstab">/etc/fstab<a class="headerlink" href="#etcfstab" title="Permanent link"></a></h3>
+<ul>
+<li>设定除了/之外其他文件系统能开机时自动挂载</li>
+<li>/etc/fstab的6个字段<ol>
+<li>设备（伪文件系统，LABEL=，UUID=）</li>
+<li>挂载点（swap为swap）</li>
+<li>文件系统类型</li>
+<li>挂载选项：defaults默认挂载，同时指定，以,隔开</li>
+<li># 转储频率：0 不备份，1每天备份，2隔天备份</li>
+<li># 自检次序：0 不自检，1-9按顺序自检</li>
+</ol>
+</li>
+<li>mount -a：将/etc/fstab中所有支持auto的设备挂载上</li>
+</ul>
+<h3 id="dfdisk-free">df（disk free）<a class="headerlink" href="#dfdisk-free" title="Permanent link"></a></h3>
+<ul>
+<li>查看磁盘使用状态</li>
+<li>df -h以人类可读的模式查看block使用百分比</li>
+<li>df -l只显示本地文件系统</li>
+<li>df -i 查看inode使用百分比</li>
+</ul>
+<h3 id="dudisk-use">du（disk use）<a class="headerlink" href="#dudisk-use" title="Permanent link"></a></h3>
+<ul>
+<li>du -sh 目录 查看目录中所有文件的大小之和</li>
+</ul>
+<div class="codehilite"><pre>[root@localhost ~]# df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda3 119G 1.1G 118G 1% /
+devtmpfs 235M 0 235M 0% /dev
+tmpfs 245M 0 245M 0% /dev/shm
+tmpfs 245M 4.3M 240M 2% /run
+tmpfs 245M 0 245M 0% /sys/fs/cgroup
+/dev/sda1 197M 97M 101M 50% /boot
+tmpfs 49M 0 49M 0% /run/user/0
+[root@localhost ~]# df -i
+Filesystem Inodes IUsed IFree IUse% Mounted on
+/dev/sda3 62287360 33849 62253511 1% /
+devtmpfs 60089 352 59737 1% /dev
+tmpfs 62502 1 62501 1% /dev/shm
+tmpfs 62502 377 62125 1% /run
+tmpfs 62502 16 62486 1% /sys/fs/cgroup
+/dev/sda1 102400 327 102073 1% /boot
+tmpfs 62502 1 62501 1% /run/user/0
+[root@localhost ~]# du -sh /usr
+858M /usr
+</pre></div>
+
+<h3 id="_8">作业<a class="headerlink" href="#_8" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>创建一个1G分区，格式化为ext4文件系统，block为2048K，预留2%管理空间，卷标为MYDATA，挂载至/mydata，要求禁止程序自动运行，不更新文件访问时间，可开机自动挂载
+<div class="codehilite"><pre>[root@localhost ~]# fdisk /dev/sdb
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): p
+
+Disk /dev/sdb: 8589 MB, 8589934592 bytes, 16777216 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x519a8c05
+
+   Device Boot Start End Blocks Id System
+
+Command (m for help): n
+Partition type:
+   p primary (0 primary, 0 extended, 4 free)
+   e extended
+Select (default p): p
+Partition number (1-4, default 1): 1
+First sector (2048-16777215, default 2048):
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-16777215, default 16777215): +1G
+Partition 1 of type Linux and of size 1 GiB is set
+
+Command (m for help): p
+
+Disk /dev/sdb: 8589 MB, 8589934592 bytes, 16777216 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x519a8c05
+
+   Device Boot Start End Blocks Id System
+/dev/sdb1 2048 2099199 1048576 83 Linux
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+[root@localhost ~]# cat /proc/partitions
+major minor #blocks name
+
+   8 0 125829120 sda
+   8 1 204800 sda1
+   8 2 1048576 sda2
+   8 3 124574720 sda3
+   8 16 8388608 sdb
+   8 17 1048576 sdb1
+  11 0 1048575 sr0
+[root@localhost ~]# mkdir /mydata
+[root@localhost ~]# mke2fs -t ext4 -b 2048 -m 2 -L MYDATA /dev/sdb1
+mke2fs 1.42.9 (28-Dec-2013)
+Filesystem label=MYDATA
+OS type: Linux
+Block size=2048 (log=1)
+Fragment size=2048 (log=1)
+Stride=0 blocks, Stripe width=0 blocks
+65536 inodes, 524288 blocks
+10485 blocks (2.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=268959744
+32 block groups
+16384 blocks per group, 16384 fragments per group
+2048 inodes per group
+Superblock backups stored on blocks:
+        16384, 49152, 81920, 114688, 147456, 409600, 442368
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+[root@localhost ~]# blkid /dev/sdb1
+/dev/sdb1: LABEL=&quot;MYDATA&quot; UUID=&quot;0602d2f5-7013-400c-9ddf-278116a5ce5a&quot; TYPE=&quot;ext4&quot;
+[root@localhost ~]# mount -o noexec,noatime /dev/sdb1 /mydata
+[root@localhost ~]# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,size=240356k,nr_inodes=60089,mode=755)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio,net_cls)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct,cpu)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+/dev/sda3 on / type xfs (rw,relatime,attr2,inode64,noquota)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=11725)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime)
+mqueue on /dev/mqueue type mqueue (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+/dev/sda1 on /boot type xfs (rw,relatime,attr2,inode64,noquota)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=50004k,mode=700)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)
+/dev/sdb1 on /mydata type ext4 (rw,noexec,noatime,data=ordered)
+[root@localhost ~]# vim /etc/fstab
+[root@localhost ~]# tail -1 /etc/fstab
+LABEL=MYDATA /mydata ext4 defaults,noexec,noatime 0 0
+[root@localhost ~]# umount /mydata/
+[root@localhost ~]# mount -a
+[root@localhost ~]# mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,size=240356k,nr_inodes=60089,mode=755)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio,net_cls)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct,cpu)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+/dev/sda3 on / type xfs (rw,relatime,attr2,inode64,noquota)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=11725)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime)
+mqueue on /dev/mqueue type mqueue (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+/dev/sda1 on /boot type xfs (rw,relatime,attr2,inode64,noquota)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=50004k,mode=700)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)
+/dev/sdb1 on /mydata type ext4 (rw,noexec,noatime,data=ordered)
+</pre></div></p>
+</li>
+<li>
+<p>创建1Gswap，并启用，开机自动启用</p>
+</li>
+</ol>
+<div class="codehilite"><pre>[root@localhost ~]# fdisk /dev/sdb
+Welcome to fdisk (util-linux 2.23.2).
+
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): n
+Partition type:
+   p primary (1 primary, 0 extended, 3 free)
+   e extended
+Select (default p): p
+Partition number (2-4, default 2): 2
+First sector (2099200-16777215, default 2099200):
+Using default value 2099200
+Last sector, +sectors or +size{K,M,G} (2099200-16777215, default 16777215): +1G
+Partition 2 of type Linux and of size 1 GiB is set
+
+Command (m for help): t
+Partition number (1,2, default 2): 2
+Hex code (type L to list all codes): 82
+Changed type of partition &#39;Linux&#39; to &#39;Linux swap / Solaris&#39;
+
+Command (m for help): p
+
+Disk /dev/sdb: 8589 MB, 8589934592 bytes, 16777216 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x519a8c05
+
+   Device Boot Start End Blocks Id System
+/dev/sdb1 2048 2099199 1048576 83 Linux
+/dev/sdb2 2099200 4196351 1048576 82 Linux swap / Solaris
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 16: Device or resource busy.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+[root@localhost ~]# cat /proc/partitions
+major minor #blocks name
+
+   8 0 125829120 sda
+   8 1 204800 sda1
+   8 2 1048576 sda2
+   8 3 124574720 sda3
+   8 16 8388608 sdb
+   8 17 1048576 sdb1
+  11 0 1048575 sr0
+[root@localhost ~]# partx -a /dev/sdb
+partx: /dev/sdb: error adding partition 1
+[root@localhost ~]# cat /proc/partitions
+major minor #blocks name
+
+   8 0 125829120 sda
+   8 1 204800 sda1
+   8 2 1048576 sda2
+   8 3 124574720 sda3
+   8 16 8388608 sdb
+   8 17 1048576 sdb1
+   8 18 1048576 sdb2
+  11 0 1048575 sr0
+[root@localhost ~]# mkswap /dev/sdb2
+Setting up swapspace version 1, size = 1048572 KiB
+no label, UUID=9206fbdc-51d5-4988-8fdd-673898750290
+[root@localhost ~]# blkid /dev/sdb2
+/dev/sdb2: UUID=&quot;9206fbdc-51d5-4988-8fdd-673898750290&quot; TYPE=&quot;swap&quot;
+[root@localhost ~]# free -m
+              total used free shared buff/cache available
+Mem: 488 77 255 4 155 379
+Swap: 1023 0 1023
+[root@localhost ~]# swapon /dev/sdb2
+[root@localhost ~]# free -m
+              total used free shared buff/cache available
+Mem: 488 77 254 4 155 378
+Swap: 2047 0 2047
+[root@localhost ~]# vim /etc/fstab
+[root@localhost ~]# tail -1 /etc/fstab
+UUID=9206fbdc-51d5-4988-8fdd-673898750290 swap swap defaults 0 0
+[root@localhost ~]# swapoff /dev/sdb2
+[root@localhost ~]# free -m
+              total used free shared buff/cache available
+Mem: 488 77 255 4 155 378
+Swap: 1023 0 1023
+[root@localhost ~]# swapon -a
+[root@localhost ~]# free -m
+              total used free shared buff/cache available
+Mem: 488 78 254 4 155 378
+Swap: 2047 0 2047
+</pre></div></article></body></html>
