@@ -1,0 +1,1955 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><title>01进程管理</title></head><body><article class="markdown-body"><h1 id="_1">进程管理<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h3 id="_2">中断<a class="headerlink" href="#_2" title="Permanent link"></a></h3>
+<ul>
+<li>硬中断：外部设备对cpu的中断</li>
+<li>软中断：内核对某个进程的中断，模式切换</li>
+</ul>
+<h3 id="_3">空间<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
+<ul>
+<li>用户空间：用户代码的运行</li>
+<li>内核空间：内核代码的运行</li>
+</ul>
+<h3 id="_4">进程<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<ul>
+<li>process：运行中程序的一个副本，有生命周期</li>
+<li>任务结构体：task struct：存储进程的固定格式</li>
+<li>任务列表：task list：多个任务结构体组成的列表</li>
+</ul>
+<h4 id="_5">进程创建<a class="headerlink" href="#_5" title="Permanent link"></a></h4>
+<ul>
+<li>init进程是内核创建的第一个进程</li>
+<li>其他进程由init进程创建</li>
+<li>进程都是由其父进程创建或销毁</li>
+</ul>
+<h4 id="_6">进程优先级<a class="headerlink" href="#_6" title="Permanent link"></a></h4>
+<ul>
+<li>1-99为实时优先级：数字越大优先级越高</li>
+<li>100-139为静态优先级：数字越小优先级越高</li>
+<li>nice值：-20,19对应静态优先级</li>
+</ul>
+<h4 id="_7">进程内存分配<a class="headerlink" href="#_7" title="Permanent link"></a></h4>
+<ul>
+<li>采用虚拟内存分配机制，一个page一般是4k，mmu内存管理单元去映射线性地址和物理地址</li>
+<li>如果物理内存不够用，会将最近最少使用的进程放入交换空间swap</li>
+</ul>
+<h4 id="ipc">进程间通信ipc<a class="headerlink" href="#ipc" title="Permanent link"></a></h4>
+<ul>
+<li>同一主机：signal信号，shm共享内存，semaphore信号量</li>
+<li>不同主机：rpc远程过程调用，socket</li>
+</ul>
+<h4 id="_8">进程类型<a class="headerlink" href="#_8" title="Permanent link"></a></h4>
+<ul>
+<li>1.守护进程 daemon：在系统引导时启动，与终端无关</li>
+<li>2.前台进程：从终端启动，可以前台启动后，转入后台守护进程</li>
+</ul>
+<h4 id="io">进程io过程<a class="headerlink" href="#io" title="Permanent link"></a></h4>
+<ul>
+<li>1.磁盘加载到内核内存 需要进行io waiting，不可中断睡眠态</li>
+<li>2.内核内存复制到用户内存</li>
+</ul>
+<h4 id="_9">进程状态<a class="headerlink" href="#_9" title="Permanent link"></a></h4>
+<ol>
+<li>运行态：running</li>
+<li>就绪态：ready</li>
+<li>睡眠态：sleep，可中断interruptable 不可中断uninterruptable</li>
+<li>停止态：stopped，只能手动启动</li>
+<li>僵死态：zombie，孤儿进程没有分配新的父进程</li>
+</ol>
+<h4 id="_10">进程分类<a class="headerlink" href="#_10" title="Permanent link"></a></h4>
+<ul>
+<li>1.cpu_bound cpu密集型</li>
+<li>2.io_bound io密集型 通常优先级设置高</li>
+</ul>
+<h3 id="pstree">pstree<a class="headerlink" href="#pstree" title="Permanent link"></a></h3>
+<ul>
+<li>查看进程树</li>
+<li>主进程为init，centos7为systemd</li>
+<li>centos7 yum -y install psmisc</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# pstree
+init─┬─abrt-dump-oops
+     ├─abrtd
+     ├─acpid
+     ├─atd
+     ├─auditd───{auditd}
+     ├─crond
+     ├─dbus-daemon
+     ├─hald─┬─hald-runner─┬─hald-addon-acpi
+     │ │ └─hald-addon-inpu
+     │ └─{hald}
+     ├─irqbalance
+     ├─master─┬─pickup
+     │ └─qmgr
+     ├─6*[mingetty]
+     ├─rsyslogd───3*[{rsyslogd}]
+     ├─sshd───sshd───bash───pstree
+     └─udevd───2*[udevd]
+[root@centos7-mould ~]# yum -y install psmisc
+[root@centos7-mould ~]# pstree
+systemd─┬─NetworkManager───2*[{NetworkManager}]
+        ├─agetty
+        ├─anacron
+        ├─atd
+        ├─auditd───{auditd}
+        ├─crond
+        ├─dbus-daemon
+        ├─irqbalance
+        ├─master─┬─pickup
+        │ └─qmgr
+        ├─polkitd───5*[{polkitd}]
+        ├─rsyslogd───2*[{rsyslogd}]
+        ├─sshd───sshd───bash───pstree
+        ├─systemd-journal
+        ├─systemd-logind
+        ├─systemd-udevd
+        └─tuned───4*[{tuned}]
+</pre></div>
+
+<h3 id="ps">ps<a class="headerlink" href="#ps" title="Permanent link"></a></h3>
+<ul>
+<li>三种风格，unix带-，bsd不带-，GNU为&ndash;</li>
+<li>a 与终端相关进程</li>
+<li>x 与终端无关进程</li>
+<li>u 以用户为中心显示，以PID排序</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# ps aux
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+root 1 0.2 0.7 125188 3696 ? Ss 19:54 0:01 /usr/lib/systemd/systemd --switched-root --system --deser
+root 2 0.0 0.0 0 0 ? S 19:54 0:00 [kthreadd]
+root 3 0.0 0.0 0 0 ? S 19:54 0:00 [ksoftirqd/0]
+root 5 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kworker/0:0H]
+root 7 0.0 0.0 0 0 ? S 19:54 0:00 [migration/0]
+root 8 0.0 0.0 0 0 ? S 19:54 0:00 [rcu_bh]
+root 9 0.0 0.0 0 0 ? S 19:54 0:00 [rcu_sched]
+root 10 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [lru-add-drain]
+root 11 0.0 0.0 0 0 ? S 19:54 0:00 [watchdog/0]
+root 12 0.0 0.0 0 0 ? S 19:54 0:00 [watchdog/1]
+root 13 0.0 0.0 0 0 ? S 19:54 0:00 [migration/1]
+root 14 0.0 0.0 0 0 ? S 19:54 0:00 [ksoftirqd/1]
+root 16 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kworker/1:0H]
+root 18 0.0 0.0 0 0 ? S 19:54 0:00 [kdevtmpfs]
+root 19 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [netns]
+root 20 0.0 0.0 0 0 ? S 19:54 0:00 [khungtaskd]
+root 21 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [writeback]
+root 22 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kintegrityd]
+root 23 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [bioset]
+root 24 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kblockd]
+root 25 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [md]
+root 26 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [edac-poller]
+root 27 0.0 0.0 0 0 ? R 19:54 0:00 [kworker/0:1]
+root 32 0.0 0.0 0 0 ? S 19:54 0:00 [kswapd0]
+root 33 0.0 0.0 0 0 ? SN 19:54 0:00 [ksmd]
+root 34 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [crypto]
+root 42 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kthrotld]
+root 43 0.0 0.0 0 0 ? S 19:54 0:00 [kworker/u4:1]
+root 44 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kmpath_rdacd]
+root 45 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kaluad]
+root 46 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kpsmoused]
+root 47 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [ipv6_addrconf]
+root 48 0.0 0.0 0 0 ? S 19:54 0:00 [kworker/1:1]
+root 61 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [deferwq]
+root 62 0.0 0.0 0 0 ? S 19:54 0:00 [kworker/0:2]
+root 93 0.0 0.0 0 0 ? S 19:54 0:00 [kauditd]
+root 94 0.0 0.0 0 0 ? S 19:54 0:00 [kworker/0:3]
+root 235 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [ata_sff]
+root 242 0.0 0.0 0 0 ? S 19:54 0:00 [scsi_eh_0]
+root 243 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [scsi_tmf_0]
+root 244 0.0 0.0 0 0 ? S 19:54 0:00 [scsi_eh_1]
+root 245 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [scsi_tmf_1]
+root 247 0.0 0.0 0 0 ? S 19:54 0:00 [kworker/u4:3]
+root 248 0.0 0.0 0 0 ? S 19:54 0:00 [scsi_eh_2]
+root 249 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [scsi_tmf_2]
+root 259 0.0 0.0 0 0 ? S 19:54 0:00 [kworker/1:2]
+root 260 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kworker/0:1H]
+root 270 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [bioset]
+root 271 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfsalloc]
+root 272 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs_mru_cache]
+root 273 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-buf/sda3]
+root 274 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-data/sda3]
+root 275 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-conv/sda3]
+root 276 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-cil/sda3]
+root 277 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-reclaim/sda]
+root 278 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-log/sda3]
+root 279 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-eofblocks/s]
+root 280 0.0 0.0 0 0 ? S 19:54 0:00 [xfsaild/sda3]
+root 281 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [kworker/1:1H]
+root 348 0.0 0.4 34980 2216 ? Ss 19:54 0:00 /usr/lib/systemd/systemd-journald
+root 379 0.0 0.3 44308 1872 ? Ss 19:54 0:00 /usr/lib/systemd/systemd-udevd
+root 413 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-buf/sda1]
+root 414 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-data/sda1]
+root 415 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-conv/sda1]
+root 416 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-cil/sda1]
+root 417 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-reclaim/sda]
+root 418 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-log/sda1]
+root 419 0.0 0.0 0 0 ? S&lt; 19:54 0:00 [xfs-eofblocks/s]
+root 420 0.0 0.0 0 0 ? S 19:54 0:00 [xfsaild/sda1]
+root 436 0.0 0.1 55508 900 ? S&lt;sl 19:54 0:00 /sbin/auditd
+root 459 0.0 0.3 26376 1740 ? Ss 19:54 0:00 /usr/lib/systemd/systemd-logind
+dbus 461 0.0 0.4 58196 2476 ? Ss 19:54 0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork
+root 466 0.0 1.8 478360 9032 ? Ssl 19:54 0:00 /usr/sbin/NetworkManager --no-daemon
+root 467 0.0 0.2 21524 1204 ? Ss 19:54 0:00 /usr/sbin/irqbalance --foreground
+polkitd 468 0.0 1.5 538432 7976 ? Ssl 19:54 0:00 /usr/lib/polkit-1/polkitd --no-debug
+root 479 0.0 0.1 25904 948 ? Ss 19:54 0:00 /usr/sbin/atd -f
+root 480 0.0 0.3 126284 1612 ? Ss 19:54 0:00 /usr/sbin/crond -n
+root 483 0.0 0.1 110088 860 tty1 Ss+ 19:54 0:00 /sbin/agetty --noclear tty1 linux
+root 686 0.0 0.8 112812 4276 ? Ss 19:54 0:00 /usr/sbin/sshd -D
+root 688 0.1 3.3 573848 16836 ? Ssl 19:54 0:00 /usr/bin/python -Es /usr/sbin/tuned -l -P
+root 689 0.0 1.4 214408 7144 ? Ssl 19:54 0:00 /usr/sbin/rsyslogd -n
+root 772 0.0 0.4 89632 2080 ? Ss 19:55 0:00 /usr/libexec/postfix/master -w
+postfix 773 0.0 0.8 89736 4060 ? S 19:55 0:00 pickup -l -t unix -u
+postfix 774 0.0 0.8 89804 4080 ? S 19:55 0:00 qmgr -l -t unix -u
+root 799 0.1 1.2 157188 6308 ? Ds 19:56 0:00 sshd: root@pts/0
+root 801 0.0 0.4 115560 2152 pts/0 Ss 19:56 0:00 -bash
+root 828 0.0 0.0 0 0 ? R 19:59 0:00 [kworker/1:0]
+root 843 0.0 0.1 123256 764 ? Ss 20:01 0:00 /usr/sbin/anacron -s
+root 848 0.0 0.3 155324 1876 pts/0 R+ 20:02 0:00 ps aux
+</pre></div>
+
+<ul>
+<li>USER 以用户为中心</li>
+<li>PID  以PID排序</li>
+<li>%CPU cpu占用</li>
+<li>%MEM 内存占用</li>
+<li>VSZ 虚拟内存</li>
+<li>RSS 常驻内存</li>
+<li>TTY 所在终端</li>
+<li>STAT 进程运行状态<ul>
+<li>R：running</li>
+<li>S：interrupt sleep</li>
+<li>D：uninterrupt sleep</li>
+<li>T：stopped</li>
+<li>Z：zombie</li>
+<li>+：前台</li>
+<li>l：多线程</li>
+<li>N：低优先级</li>
+<li>&lt;：高优先级</li>
+<li>s：会话引领者</li>
+</ul>
+</li>
+<li>START进程开始运行时刻</li>
+<li>TIME 进程总共运行时间 </li>
+<li>COMMAND 进程执行命令<ul>
+<li>[]为内核线程</li>
+</ul>
+</li>
+<li>ps -eFH e为所有进程 F为完整格式 H为层次结构
+<div class="codehilite"><pre>[root@centos7-mould ~]# ps -eFH
+UID PID PPID C SZ RSS PSR STIME TTY TIME CMD
+root 2 0 0 0 0 0 19:54 ? 00:00:00 [kthreadd]
+root 3 2 0 0 0 0 19:54 ? 00:00:00 [ksoftirqd/0]
+root 5 2 0 0 0 0 19:54 ? 00:00:00 [kworker/0:0H]
+root 7 2 0 0 0 0 19:54 ? 00:00:00 [migration/0]
+root 8 2 0 0 0 0 19:54 ? 00:00:00 [rcu_bh]
+root 9 2 0 0 0 0 19:54 ? 00:00:00 [rcu_sched]
+root 10 2 0 0 0 0 19:54 ? 00:00:00 [lru-add-drain]
+root 11 2 0 0 0 0 19:54 ? 00:00:00 [watchdog/0]
+root 12 2 0 0 0 1 19:54 ? 00:00:00 [watchdog/1]
+root 13 2 0 0 0 1 19:54 ? 00:00:00 [migration/1]
+root 14 2 0 0 0 1 19:54 ? 00:00:00 [ksoftirqd/1]
+root 16 2 0 0 0 1 19:54 ? 00:00:00 [kworker/1:0H]
+root 18 2 0 0 0 0 19:54 ? 00:00:00 [kdevtmpfs]
+root 19 2 0 0 0 1 19:54 ? 00:00:00 [netns]
+root 20 2 0 0 0 1 19:54 ? 00:00:00 [khungtaskd]
+root 21 2 0 0 0 1 19:54 ? 00:00:00 [writeback]
+root 22 2 0 0 0 1 19:54 ? 00:00:00 [kintegrityd]
+root 23 2 0 0 0 0 19:54 ? 00:00:00 [bioset]
+root 24 2 0 0 0 1 19:54 ? 00:00:00 [kblockd]
+root 25 2 0 0 0 1 19:54 ? 00:00:00 [md]
+root 26 2 0 0 0 1 19:54 ? 00:00:00 [edac-poller]
+root 27 2 0 0 0 0 19:54 ? 00:00:00 [kworker/0:1]
+root 32 2 0 0 0 1 19:54 ? 00:00:00 [kswapd0]
+root 33 2 0 0 0 1 19:54 ? 00:00:00 [ksmd]
+root 34 2 0 0 0 1 19:54 ? 00:00:00 [crypto]
+root 42 2 0 0 0 1 19:54 ? 00:00:00 [kthrotld]
+root 43 2 0 0 0 1 19:54 ? 00:00:00 [kworker/u4:1]
+root 44 2 0 0 0 1 19:54 ? 00:00:00 [kmpath_rdacd]
+root 45 2 0 0 0 1 19:54 ? 00:00:00 [kaluad]
+root 46 2 0 0 0 1 19:54 ? 00:00:00 [kpsmoused]
+root 47 2 0 0 0 1 19:54 ? 00:00:00 [ipv6_addrconf]
+root 61 2 0 0 0 1 19:54 ? 00:00:00 [deferwq]
+root 93 2 0 0 0 1 19:54 ? 00:00:00 [kauditd]
+root 94 2 0 0 0 0 19:54 ? 00:00:00 [kworker/0:3]
+root 235 2 0 0 0 0 19:54 ? 00:00:00 [ata_sff]
+root 242 2 0 0 0 0 19:54 ? 00:00:00 [scsi_eh_0]
+root 243 2 0 0 0 0 19:54 ? 00:00:00 [scsi_tmf_0]
+root 244 2 0 0 0 1 19:54 ? 00:00:00 [scsi_eh_1]
+root 245 2 0 0 0 0 19:54 ? 00:00:00 [scsi_tmf_1]
+root 247 2 0 0 0 1 19:54 ? 00:00:00 [kworker/u4:3]
+root 248 2 0 0 0 0 19:54 ? 00:00:00 [scsi_eh_2]
+root 249 2 0 0 0 1 19:54 ? 00:00:00 [scsi_tmf_2]
+root 259 2 0 0 0 1 19:54 ? 00:00:00 [kworker/1:2]
+root 260 2 0 0 0 0 19:54 ? 00:00:00 [kworker/0:1H]
+root 270 2 0 0 0 0 19:54 ? 00:00:00 [bioset]
+root 271 2 0 0 0 0 19:54 ? 00:00:00 [xfsalloc]
+root 272 2 0 0 0 1 19:54 ? 00:00:00 [xfs_mru_cache]
+root 273 2 0 0 0 1 19:54 ? 00:00:00 [xfs-buf/sda3]
+root 274 2 0 0 0 1 19:54 ? 00:00:00 [xfs-data/sda3]
+root 275 2 0 0 0 1 19:54 ? 00:00:00 [xfs-conv/sda3]
+root 276 2 0 0 0 1 19:54 ? 00:00:00 [xfs-cil/sda3]
+root 277 2 0 0 0 1 19:54 ? 00:00:00 [xfs-reclaim/sda]
+root 278 2 0 0 0 1 19:54 ? 00:00:00 [xfs-log/sda3]
+root 279 2 0 0 0 1 19:54 ? 00:00:00 [xfs-eofblocks/s]
+root 280 2 0 0 0 1 19:54 ? 00:00:00 [xfsaild/sda3]
+root 281 2 0 0 0 1 19:54 ? 00:00:00 [kworker/1:1H]
+root 413 2 0 0 0 1 19:54 ? 00:00:00 [xfs-buf/sda1]
+root 414 2 0 0 0 1 19:54 ? 00:00:00 [xfs-data/sda1]
+root 415 2 0 0 0 0 19:54 ? 00:00:00 [xfs-conv/sda1]
+root 416 2 0 0 0 1 19:54 ? 00:00:00 [xfs-cil/sda1]
+root 417 2 0 0 0 1 19:54 ? 00:00:00 [xfs-reclaim/sda]
+root 418 2 0 0 0 1 19:54 ? 00:00:00 [xfs-log/sda1]
+root 419 2 0 0 0 1 19:54 ? 00:00:00 [xfs-eofblocks/s]
+root 420 2 0 0 0 1 19:54 ? 00:00:00 [xfsaild/sda1]
+root 828 2 0 0 0 1 19:59 ? 00:00:00 [kworker/1:0]
+root 849 2 0 0 0 0 20:04 ? 00:00:00 [kworker/0:0]
+root 852 2 0 0 0 1 20:10 ? 00:00:00 [kworker/1:1]
+root 1 0 0 31297 3700 0 19:54 ? 00:00:01 /usr/lib/systemd/systemd --switched-root --system --deseri
+root 348 1 0 8745 2216 0 19:54 ? 00:00:00 /usr/lib/systemd/systemd-journald
+root 379 1 0 11077 1872 1 19:54 ? 00:00:00 /usr/lib/systemd/systemd-udevd
+root 436 1 0 13877 900 0 19:54 ? 00:00:00 /sbin/auditd
+root 459 1 0 6594 1740 0 19:54 ? 00:00:00 /usr/lib/systemd/systemd-logind
+dbus 461 1 0 14549 2476 1 19:54 ? 00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofor
+root 466 1 0 119590 9032 1 19:54 ? 00:00:00 /usr/sbin/NetworkManager --no-daemon
+root 467 1 0 5381 1204 1 19:54 ? 00:00:00 /usr/sbin/irqbalance --foreground
+polkitd 468 1 0 134608 7976 0 19:54 ? 00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+root 479 1 0 6476 948 0 19:54 ? 00:00:00 /usr/sbin/atd -f
+root 480 1 0 31571 1612 1 19:54 ? 00:00:00 /usr/sbin/crond -n
+root 483 1 0 27522 860 1 19:54 tty1 00:00:00 /sbin/agetty --noclear tty1 linux
+root 686 1 0 28203 4276 1 19:54 ? 00:00:00 /usr/sbin/sshd -D
+root 799 686 0 39297 6308 1 19:56 ? 00:00:00 sshd: root@pts/0
+root 801 799 0 28890 2152 1 19:56 pts/0 00:00:00 -bash
+root 853 801 0 38865 1952 1 20:11 pts/0 00:00:00 ps -eFH
+root 688 1 0 143462 16836 0 19:54 ? 00:00:00 /usr/bin/python -Es /usr/sbin/tuned -l -P
+root 689 1 0 53602 7144 0 19:54 ? 00:00:00 /usr/sbin/rsyslogd -n
+root 772 1 0 22408 2080 1 19:55 ? 00:00:00 /usr/libexec/postfix/master -w
+postfix 773 772 0 22434 4060 1 19:55 ? 00:00:00 pickup -l -t unix -u
+postfix 774 772 0 22451 4080 1 19:55 ? 00:00:00 qmgr -l -t unix -u
+root 843 1 0 30814 764 1 20:01 ? 00:00:00 /usr/sbin/anacron -s
+</pre></div></li>
+<li>UID：用户</li>
+<li>PID：进程号</li>
+<li>PPID：父进程号</li>
+<li>C：占cpu百分比</li>
+<li>SZ：分配内存</li>
+<li>RSS：实际内存 （KB）</li>
+<li>PSR：在哪个核心</li>
+<li>STIME：开始时间</li>
+<li>TTY：终端</li>
+<li>TIME：运行时间</li>
+<li>CMD：执行命令</li>
+<li>ps -eo 自定义字段</li>
+</ul>
+<h3 id="pgrep">pgrep 进程过滤<a class="headerlink" href="#pgrep" title="Permanent link"></a></h3>
+<ul>
+<li>-U 指定用户</li>
+<li>-t 指定</li>
+<li>-l 显示进程名</li>
+<li>-p：显示子进程</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# pgrep -a ssh
+686 /usr/sbin/sshd -D
+799 sshd: root@pts/0
+[root@centos7-mould ~]# pgrep -l ssh
+686 sshd
+799 sshd
+</pre></div>
+
+<h3 id="pidof">pidof<a class="headerlink" href="#pidof" title="Permanent link"></a></h3>
+<ul>
+<li>根据进程名获取pid</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# pidof sshd
+794 686
+</pre></div>
+
+<h3 id="top">top<a class="headerlink" href="#top" title="Permanent link"></a></h3>
+<ul>
+<li>动态显示linux进程信息，默认按照%cpu排序</li>
+<li>第一行；uptime信息，load average：负载，等待运行进程的队列长度，当与cpu核数相同时负载满载</li>
+<li>第二行：task任务信息</li>
+<li>第三行：内存信息，available是真实可用内存</li>
+<li>us 用户空间</li>
+<li>sy 内核空间</li>
+<li>id 空闲时间</li>
+<li>wa io等待时间</li>
+<li>ni nice转换时间</li>
+<li>hi 硬中断时间</li>
+<li>si 软中断时间</li>
+<li>st 虚拟化偷走时间</li>
+<li>排序：<ul>
+<li>默认P cpu</li>
+<li>M：内存</li>
+<li>T：累计运行时间</li>
+</ul>
+</li>
+<li>数字1：查看每颗cpu使用情况</li>
+<li>q：退出</li>
+<li>s：设置间隔</li>
+<li>k ：终止进程</li>
+<li>指定 -d：设定top间隔时间，默认3s</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# top -d 1
+top - 00:39:32 up 12 min, 1 user, load average: 0.00, 0.03, 0.05
+Tasks: 88 total, 1 running, 87 sleeping, 0 stopped, 0 zombie
+%Cpu(s): 0.0 us, 0.0 sy, 0.0 ni,100.0 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st
+KiB Mem : 499280 total, 357328 free, 54836 used, 87116 buff/cache
+KiB Swap: 1048572 total, 1048572 free, 0 used. 417128 avail Mem
+
+  PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND
+  794 root 20 0 157188 6308 4944 S 1.0 1.3 0:00.35 sshd
+    1 root 20 0 125188 3712 2572 S 0.0 0.7 0:01.62 systemd
+    2 root 20 0 0 0 0 S 0.0 0.0 0:00.00 kthreadd
+    3 root 20 0 0 0 0 S 0.0 0.0 0:00.02 ksoftirqd/0
+    5 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 kworker/0:0H
+    7 root rt 0 0 0 0 S 0.0 0.0 0:00.11 migration/0
+    8 root 20 0 0 0 0 S 0.0 0.0 0:00.00 rcu_bh
+    9 root 20 0 0 0 0 S 0.0 0.0 0:00.38 rcu_sched
+   10 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 lru-add-drain
+   11 root rt 0 0 0 0 S 0.0 0.0 0:00.00 watchdog/0
+   12 root rt 0 0 0 0 S 0.0 0.0 0:00.00 watchdog/1
+   13 root rt 0 0 0 0 S 0.0 0.0 0:00.00 migration/1
+   14 root 20 0 0 0 0 S 0.0 0.0 0:00.01 ksoftirqd/1
+   16 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 kworker/1:0H
+   18 root 20 0 0 0 0 S 0.0 0.0 0:00.00 kdevtmpfs
+   19 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 netns
+   20 root 20 0 0 0 0 S 0.0 0.0 0:00.00 khungtaskd
+   21 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 writeback
+   22 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 kintegrityd
+   23 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 bioset
+   24 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 kblockd
+   25 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 md
+   26 root 0 -20 0 0 0 S 0.0 0.0 0:00.00 edac-poller
+   27 root 20 0 0 0 0 S 0.0 0.0 0:00.06 kworker/0:1
+   32 root 20 0 0 0 0 S 0.0 0.0 0:00.00 kswapd0
+   33 root 25 5 0 0 0 S 0.0 0.0 0:00.00 ksmd
+</pre></div>
+
+<h3 id="htop">htop<a class="headerlink" href="#htop" title="Permanent link"></a></h3>
+<ul>
+<li>top的升级版</li>
+<li>l ：lsof 跟踪进程打开的文件列表</li>
+<li>s：strace 跟踪系统调用</li>
+<li>t：层级关系</li>
+<li>a：affinity cpu亲和力，绑定程序运行的cpu核心</li>
+</ul>
+<h3 id="vmstat">vmstat<a class="headerlink" href="#vmstat" title="Permanent link"></a></h3>
+<ul>
+<li>vmstat 2 3 ：间隔秒数，运行次数</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# vmstat 1 10
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r b swpd free buff cache si so bi bo in cs us sy id wa st
+ 1 0 0 355264 2076 87016 0 0 41 3 43 42 0 0 99 1 0
+ 0 0 0 355264 2076 87016 0 0 0 0 70 60 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 62 57 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 56 51 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 69 61 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 61 50 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 2 75 68 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 64 50 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 90 66 0 0 100 0 0
+ 0 0 0 355240 2076 87016 0 0 0 0 59 52 0 0 100 0 0
+</pre></div>
+
+<ul>
+<li>procs<ul>
+<li>r：等待运行的队列长度</li>
+<li>b：处于不可中断睡眠态被阻塞的任务队列长度</li>
+</ul>
+</li>
+<li>memory<ul>
+<li>swap</li>
+<li>free</li>
+<li>buffer</li>
+<li>cache</li>
+</ul>
+</li>
+<li>swap<ul>
+<li>si：数据换入swap的速率，kb/s</li>
+<li>so：数据换出swap的速率，kb/s</li>
+</ul>
+</li>
+<li>io<ul>
+<li>bi：从块设备读入到内存的速率</li>
+<li>bo：从内存写入到块设备的速率</li>
+</ul>
+</li>
+<li>system<ul>
+<li>in：interrupt中断速率</li>
+<li>cs：context switch 上下文切换速率</li>
+</ul>
+</li>
+<li>cpu<ul>
+<li>us</li>
+<li>sy</li>
+<li>id</li>
+<li>wa</li>
+<li>st</li>
+</ul>
+</li>
+<li>vmstat -s 显示内存详细信息</li>
+</ul>
+<h3 id="pmap">pmap<a class="headerlink" href="#pmap" title="Permanent link"></a></h3>
+<ul>
+<li>查看内存映射</li>
+<li>查看详细 pmap -x pid</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# pmap -x 470
+470: /usr/sbin/crond -n
+Address Kbytes RSS Dirty Mode Mapping
+0000561f54d22000 60 52 0 r-x-- crond
+0000561f54f31000 4 4 4 r---- crond
+0000561f54f32000 4 4 4 rw--- crond
+0000561f54f33000 512 136 136 rw--- [ anon ]
+0000561f55d15000 132 28 28 rw--- [ anon ]
+00007f05588f2000 48 24 0 r-x-- libnss_files-2.17.so
+00007f05588fe000 2044 0 0 ----- libnss_files-2.17.so
+00007f0558afd000 4 4 4 r---- libnss_files-2.17.so
+00007f0558afe000 4 4 4 rw--- libnss_files-2.17.so
+00007f0558aff000 24 0 0 rw--- [ anon ]
+00007f0558b05000 103588 44 0 r---- locale-archive
+00007f055f02e000 92 56 0 r-x-- libpthread-2.17.so
+00007f055f045000 2044 0 0 ----- libpthread-2.17.so
+00007f055f244000 4 4 4 r---- libpthread-2.17.so
+00007f055f245000 4 4 4 rw--- libpthread-2.17.so
+00007f055f246000 16 4 4 rw--- [ anon ]
+00007f055f24a000 16 8 0 r-x-- libcap-ng.so.0.0.0
+00007f055f24e000 2048 0 0 ----- libcap-ng.so.0.0.0
+00007f055f44e000 4 4 4 r---- libcap-ng.so.0.0.0
+00007f055f44f000 4 4 4 rw--- libcap-ng.so.0.0.0
+00007f055f450000 384 8 0 r-x-- libpcre.so.1.2.0
+00007f055f4b0000 2048 0 0 ----- libpcre.so.1.2.0
+00007f055f6b0000 4 4 4 r---- libpcre.so.1.2.0
+00007f055f6b1000 4 4 4 rw--- libpcre.so.1.2.0
+00007f055f6b2000 1804 600 0 r-x-- libc-2.17.so
+00007f055f875000 2044 0 0 ----- libc-2.17.so
+00007f055fa74000 16 16 16 r---- libc-2.17.so
+00007f055fa78000 8 8 8 rw--- libc-2.17.so
+00007f055fa7a000 20 20 20 rw--- [ anon ]
+00007f055fa7f000 120 16 0 r-x-- libaudit.so.1.0.0
+00007f055fa9d000 2044 0 0 ----- libaudit.so.1.0.0
+00007f055fc9c000 4 4 4 r---- libaudit.so.1.0.0
+00007f055fc9d000 4 4 4 rw--- libaudit.so.1.0.0
+00007f055fc9e000 40 0 0 rw--- [ anon ]
+00007f055fca8000 8 8 0 r-x-- libdl-2.17.so
+00007f055fcaa000 2048 0 0 ----- libdl-2.17.so
+00007f055feaa000 4 4 4 r---- libdl-2.17.so
+00007f055feab000 4 4 4 rw--- libdl-2.17.so
+00007f055feac000 52 12 0 r-x-- libpam.so.0.83.1
+00007f055feb9000 2048 0 0 ----- libpam.so.0.83.1
+00007f05600b9000 4 4 4 r---- libpam.so.0.83.1
+00007f05600ba000 4 4 4 rw--- libpam.so.0.83.1
+00007f05600bb000 144 40 0 r-x-- libselinux.so.1
+00007f05600df000 2044 0 0 ----- libselinux.so.1
+00007f05602de000 4 4 4 r---- libselinux.so.1
+00007f05602df000 4 4 4 rw--- libselinux.so.1
+00007f05602e0000 8 4 4 rw--- [ anon ]
+00007f05602e2000 136 116 0 r-x-- ld-2.17.so
+00007f05604f6000 24 24 24 rw--- [ anon ]
+00007f0560502000 4 4 4 rw--- [ anon ]
+00007f0560503000 4 4 4 r---- ld-2.17.so
+00007f0560504000 4 4 4 rw--- ld-2.17.so
+00007f0560505000 4 4 4 rw--- [ anon ]
+00007ffce10ba000 520 292 292 rw--- [ stack ]
+00007ffce11ab000 8 4 0 r-x-- [ anon ]
+ffffffffff600000 4 0 0 r-x-- [ anon ]
+---------------- ------- ------- -------
+total kB 126284 1608 620
+</pre></div>
+
+<h3 id="glances">glances<a class="headerlink" href="#glances" title="Permanent link"></a></h3>
+<ul>
+<li>类似top，可以跨平台，主机</li>
+<li>-f PATH 保存为文件</li>
+<li>-o {HTML/CSV} 指定输出格式</li>
+<li>c/s模式<ul>
+<li>c glances -c IPADDR</li>
+<li>s glances -s -B IPADDR</li>
+</ul>
+</li>
+<li>c以cpu排序，m以内存排序，i以io排序</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# yum -y install python-jinja2
+[root@centos6-mould ~]# glances -f /tmp -o HTML
+</pre></div>
+
+<h3 id="dstat">dstat<a class="headerlink" href="#dstat" title="Permanent link"></a></h3>
+<ul>
+<li>系统资源统计</li>
+<li>c：cpu</li>
+<li>d：disk</li>
+<li>n：net</li>
+<li>g：page</li>
+<li>y：system</li>
+<li>m：mem</li>
+<li>p：proc</li>
+<li>r：io</li>
+<li>i：interrupt</li>
+<li>s：swap</li>
+<li>l：load average</li>
+<li>&ndash;tcp</li>
+<li>&ndash;udp</li>
+<li>&ndash;raw</li>
+<li>&ndash;socket</li>
+<li>&ndash;ipc</li>
+<li>&ndash;top-io</li>
+<li>&ndash;top-cpu</li>
+<li>&ndash;top-mem</li>
+<li>&ndash;top-latency 延迟
+<div class="codehilite"><pre>[root@centos6-mould ~]# dstat -cdngylm
+----total-cpu-usage---- -dsk/total- -net/total- ---paging-- ---system-- ---load-avg--- ------memory-usage-----
+usr sys idl wai hiq siq| read writ| recv send| in out | int csw | 1m 5m 15m | used buff cach free
+  0 0 99 0 0 0| 89k 4068B| 0 0 | 0 0 | 25 13 |0.05 0.03 0|90.3M 33.3M 205M 162M
+[root@centos6-mould ~]# dstat -s --tcp --top-cpu --top-mem --top-io --top-latency
+----swap--- ----tcp-sockets---- -most-expensive- --most-expensive- ----most-expensive---- --highest-total--
+ used free|lis act syn tim clo| cpu process | memory process | i/o process | latency process
+   0 1024M| 3 1 0 0 0|events/1 0.0|sshd: root@p4444k|bash 149k 1789B|kblockd/0 39
+   0 1024M| 3 1 0 0 0| |sshd: root@p4444k|sshd: root@ 846B 896B|kblockd/0 39
+</pre></div></li>
+</ul>
+<h3 id="kill">kill<a class="headerlink" href="#kill" title="Permanent link"></a></h3>
+<ul>
+<li>给进程发信号</li>
+<li>kill -l查看信号列表</li>
+<li>信号三种表示方法<ul>
+<li>1.数字</li>
+<li>2.完整</li>
+<li>3.简写</li>
+</ul>
+</li>
+<li>kill -信号 进程PID</li>
+<li>1.SIGHUP 1 不关闭进程并重读配置文件</li>
+<li>2.SIGINT 2 中止正在运行的进程，相当于ctrl+c</li>
+<li>3.SIGKILL 9 强制杀死进程，容易文件损害</li>
+<li>4.SIGTERM 15 默认，关闭文件后终止进程</li>
+<li>5.SIGSTOP 19 停止进程，相当于ctrl+z</li>
+<li>6.SIGCONT 18 使停止的进程继续运行</li>
+<li>jobs查看停止的进程</li>
+<li>fg可以在前台继续运行</li>
+<li>bg 后台运行</li>
+</ul>
+<h3 id="killall">killall<a class="headerlink" href="#killall" title="Permanent link"></a></h3>
+<ul>
+<li>killall 进程名</li>
+<li>杀死所有进程名的进程</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# ps -ef|grep dstat
+root 2133 1517 0 16:24 pts/0 00:00:00 python /usr/bin/dstat -cdngylm
+root 2159 2136 0 16:27 pts/1 00:00:00 grep --color=auto dstat
+[root@centos6-mould ~]# kill -18 2133
+[root@centos6-mould ~]# kill -19 2133
+</pre></div>
+
+<h3 id="_11">作业控制<a class="headerlink" href="#_11" title="Permanent link"></a></h3>
+<h4 id="job">job<a class="headerlink" href="#job" title="Permanent link"></a></h4>
+<ul>
+<li>分为前台作业和后台作业</li>
+<li>前台作业fg：终端启动，占据终端</li>
+<li>后台作业bg：终端启动，转入后台运行</li>
+</ul>
+<h4 id="_12">如何让作业运行于后台<a class="headerlink" href="#_12" title="Permanent link"></a></h4>
+<ul>
+<li>1.运行中作业：ctrl+z先转为停止态，然后bg在后台运行，与终端有关</li>
+<li>2.尚未启动的作业：COMMAND &amp; 将作业送往后台，与终端有关</li>
+<li>3.尚未启动的作业与终端无关：nohup COMMAND &amp; 后台脱离终端</li>
+</ul>
+<h4 id="jobs">jobs<a class="headerlink" href="#jobs" title="Permanent link"></a></h4>
+<ul>
+<li>显示所有作业</li>
+</ul>
+<h4 id="fg">fg<a class="headerlink" href="#fg" title="Permanent link"></a></h4>
+<ul>
+<li>fg [%][JOB_NUM] 前台运行作业</li>
+<li>bg [%][JOB_NUM] 后台运行作业</li>
+<li>kill %JOB_NUM 杀死作业</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# tail -f /var/log/messages
+Jun 23 16:24:54 localhost systemd-logind: Removed session 7.
+Jun 23 16:24:54 localhost systemd: Removed slice User Slice of root.
+Jun 23 16:24:54 localhost systemd: Stopping User Slice of root.
+Jun 23 16:44:17 localhost systemd: Created slice User Slice of root.
+Jun 23 16:44:17 localhost systemd: Starting User Slice of root.
+Jun 23 16:44:17 localhost systemd: Started Session 8 of user root.
+Jun 23 16:44:17 localhost systemd-logind: New session 8 of user root.
+Jun 23 16:44:17 localhost systemd: Starting Session 8 of user root.
+Jun 23 17:01:01 localhost systemd: Started Session 9 of user root.
+Jun 23 17:01:01 localhost systemd: Starting Session 9 of user root.
+^Z
+[1]+ Stopped tail -f /var/log/messages
+[root@centos7-mould ~]# jobs
+[1]+ Stopped tail -f /var/log/messages
+[root@centos7-mould ~]# fg 1
+tail -f /var/log/messages
+^Z
+[1]+ Stopped tail -f /var/log/messages
+[root@centos7-mould ~]# jobs
+[1]+ Stopped tail -f /var/log/messages
+[root@centos7-mould ~]# kill %1
+
+[1]+ Stopped tail -f /var/log/messages
+[root@centos7-mould ~]# jobs
+[1]+ Terminated tail -f /var/log/messages
+[root@centos7-mould ~]# jobs
+[root@centos6-mould ~]# nohup dd if=/dev/zero of=/root/a.out bs=4096 count=2000000 &amp; [1] 2532
+[root@centos6-mould ~]# nohup: ignoring input and appending output to `nohup.out&#39;
+
+[root@centos6-mould ~]# jobs
+[1]+ Running nohup dd if=/dev/zero of=/root/a.out bs=4096 count=2000000 &amp;
+</pre></div>
+
+<h3 id="_13">调整进程优先级<a class="headerlink" href="#_13" title="Permanent link"></a></h3>
+<ul>
+<li>nice值[-20,19] 对应优先级 [100-139] 默认0 对应120</li>
+</ul>
+<h4 id="nice">nice<a class="headerlink" href="#nice" title="Permanent link"></a></h4>
+<ul>
+<li>初次启动的命令设置nice值</li>
+<li>nice -n NICE COMMAND</li>
+<li>仅管理员可以调低nice值</li>
+</ul>
+<h4 id="renice">renice<a class="headerlink" href="#renice" title="Permanent link"></a></h4>
+<ul>
+<li>已经启动的命令调整nice值</li>
+<li>renice -n NICE PID</li>
+</ul>
+<h4 id="nice_1">查看nice和优先级<a class="headerlink" href="#nice_1" title="Permanent link"></a></h4>
+<ul>
+<li>ps axo pid,ni,priority,comm</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# ps axo pid,ni,priority,comm|grep sshd
+  675 0 20 sshd
+ 1303 0 20 sshd
+</pre></div>
+
+<h3 id="sar">sar<a class="headerlink" href="#sar" title="Permanent link"></a></h3>
+<ul>
+<li>sar 1 监控cpu</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# sar 1
+Linux 2.6.32-696.30.1.el6.x86_64 (centos6-mould) 06/23/2018 _x86_64_ (2 CPU)
+
+06:06:37 PM CPU %user %nice %system %iowait %steal %idle
+06:06:38 PM all 0.50 0.00 0.00 0.00 0.00 99.50
+06:06:39 PM all 0.00 0.00 0.50 0.00 0.00 99.50
+</pre></div>
+
+<h3 id="tsar">tsar<a class="headerlink" href="#tsar" title="Permanent link"></a></h3>
+<ul>
+<li>淘宝对sar的升级</li>
+</ul>
+<h3 id="iostat">iostat<a class="headerlink" href="#iostat" title="Permanent link"></a></h3>
+<ul>
+<li>监控io</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# sar 1
+Linux 2.6.32-696.30.1.el6.x86_64 (centos6-mould) 06/23/2018 _x86_64_ (2 CPU)
+
+06:06:37 PM CPU %user %nice %system %iowait %steal %idle
+06:06:38 PM all 0.50 0.00 0.00 0.00 0.00 99.50
+06:06:39 PM all 0.00 0.00 0.50 0.00 0.00 99.50
+
+[root@centos6-mould ~]# iostat 1
+Linux 2.6.32-696.30.1.el6.x86_64 (centos6-mould) 06/23/2018 _x86_64_ (2 CPU)
+
+avg-cpu: %user %nice %system %iowait %steal %idle
+           0.12 0.02 0.51 0.38 0.00 98.97
+
+Device: tps Blk_read/s Blk_wrtn/s Blk_read Blk_wrtn
+sdb 0.01 0.12 0.00 2304 0
+sdc 0.01 0.12 0.00 2304 0
+sda 5.26 123.91 3844.21 2380704 73859724
+sdd 0.01 0.12 0.00 2304 0
+</pre></div>
+
+<h3 id="iftop">iftop<a class="headerlink" href="#iftop" title="Permanent link"></a></h3>
+<ul>
+<li>根据ip监控流量</li>
+</ul>
+<h3 id="nethogs">nethogs<a class="headerlink" href="#nethogs" title="Permanent link"></a></h3>
+<ul>
+<li>根据进程监控流量</li>
+</ul>
+<h3 id="_14">网络客户端<a class="headerlink" href="#_14" title="Permanent link"></a></h3>
+<h4 id="ping">ping<a class="headerlink" href="#ping" title="Permanent link"></a></h4>
+<ul>
+<li>ICMP echo request 报文发送，得到对方主机的echo reply</li>
+<li>-c 指定发送次数</li>
+<li>-w：ping超时</li>
+<li>-W：对方响应超时</li>
+<li>-s：指定字节</li>
+<li>ping开启会有ddos攻击，内核参数关闭</li>
+</ul>
+<h4 id="hping">hping<a class="headerlink" href="#hping" title="Permanent link"></a></h4>
+<ul>
+<li>hping &ndash;fast &ndash;faster &ndash;flood可以用ping攻击服务器</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# ping -c 3 -w 3 -W 3 -s 120 192.168.1.4
+PING 192.168.1.4 (192.168.1.4) 120(148) bytes of data.
+From 192.168.1.8 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.8 icmp_seq=3 Destination Host Unreachable
+From 192.168.1.8 icmp_seq=4 Destination Host Unreachable
+
+--- 192.168.1.4 ping statistics ---
+4 packets transmitted, 0 received, +3 errors, 100% packet loss, time 3000ms
+pipe 3
+[root@centos6-mould ~]# ping -c 3 -w 3 -W 3 -s 120 192.168.1.7
+PING 192.168.1.7 (192.168.1.7) 120(148) bytes of data.
+128 bytes from 192.168.1.7: icmp_seq=1 ttl=64 time=0.895 ms
+128 bytes from 192.168.1.7: icmp_seq=2 ttl=64 time=0.570 ms
+128 bytes from 192.168.1.7: icmp_seq=3 ttl=64 time=0.478 ms
+
+--- 192.168.1.7 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 0.478/0.647/0.895/0.181 ms
+</pre></div>
+
+<h4 id="traceroute">traceroute<a class="headerlink" href="#traceroute" title="Permanent link"></a></h4>
+<ul>
+<li>跟踪路由：从源主机到目的主机经过的网关</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# traceroute www.163.com
+traceroute to www.163.com (113.107.44.166), 30 hops max, 60 byte packets
+ 1 192.168.1.1 (192.168.1.1) 1.203 ms 1.336 ms 1.298 ms
+ 2 192.168.100.1 (192.168.100.1) 1.706 ms 1.870 ms 1.841 ms
+ 3 113.65.188.1 (113.65.188.1) 4.039 ms 4.017 ms 3.982 ms
+ 4 113.98.88.77 (113.98.88.77) 8.697 ms 121.33.240.205 (121.33.240.205) 4.987 ms 121.33.240.201 (121.33.240.201) 4.962 ms
+ 5 * * *
+ 6 121.11.148.25 (121.11.148.25) 556.892 ms 551.049 ms 183.2.255.238 (183.2.255.238) 11.042 ms
+ 7 * * 183.2.255.242 (183.2.255.242) 12.887 ms
+ 8 113.107.44.166 (113.107.44.166) 15.526 ms 113.107.39.38 (113.107.39.38) 15.474 ms 15.925 ms
+</pre></div>
+
+<h4 id="ftp">ftp<a class="headerlink" href="#ftp" title="Permanent link"></a></h4>
+<ul>
+<li>ftp客户端工具</li>
+</ul>
+<h4 id="lftp">lftp<a class="headerlink" href="#lftp" title="Permanent link"></a></h4>
+<ul>
+<li>ftp客户端工具</li>
+<li>-u user,pass 用户名，密码</li>
+<li>-p 端口</li>
+<li>get mget 下载</li>
+<li>put mput 上传</li>
+<li>rm mrm 删除</li>
+<li>mirror 镜像上传/下载</li>
+</ul>
+<h4 id="lftpget">lftpget 下载工具<a class="headerlink" href="#lftpget" title="Permanent link"></a></h4>
+<h4 id="wget">wget 下载工具<a class="headerlink" href="#wget" title="Permanent link"></a></h4>
+<ul>
+<li>-b：后台执行</li>
+<li>-q：静默执行</li>
+<li>-a：下载日志保存</li>
+<li>-O：文件另存为</li>
+<li>-c：续传</li>
+<li>&ndash;limit-rate：限制下载速度</li>
+</ul>
+<div class="codehilite"><pre>[root@centos6-mould ~]# wget http://www.163.com -O 163index.html -q
+</pre></div>
+
+<h3 id="bashwhile-until">bash脚本编程：while until循环<a class="headerlink" href="#bashwhile-until" title="Permanent link"></a></h3>
+<h4 id="while">while循环<a class="headerlink" href="#while" title="Permanent link"></a></h4>
+<div class="codehilite"><pre>while CONDITION;do
+    循环体
+    循环控制语句
+done
+</pre></div>
+
+<ul>
+<li>进入条件：CONDITION 测试为真</li>
+<li>退出条件：CONDITION 测试为假</li>
+</ul>
+<h4 id="until">until循环<a class="headerlink" href="#until" title="Permanent link"></a></h4>
+<div class="codehilite"><pre>until CONDITION;do
+    循环体
+    循环控制语句
+done
+</pre></div>
+
+<ul>
+<li>进入条件：CONDITION 测试为假</li>
+<li>退出条件：CONDITION 测试为真</li>
+</ul>
+<div class="codehilite"><pre>[root@centos7-mould ~]# cat 99.sh
+#!/bin/bash
+# description: 99乘法表
+# author: xuluchuan
+# version: 1.0
+# date: 20180623
+declare -i i=1
+declare -i j=1
+while [ $i -le 9 ];do
+    j=1
+    while [ $j -le $i ];do
+        echo -n -e &quot;${j}X${i}=$[${j}*${i}]\t&quot;
+        let j++
+    done
+    let i++
+    echo
+done
+[root@centos7-mould ~]# bash 99.sh
+1X1=1
+1X2=2 2X2=4
+1X3=3 2X3=6 3X3=9
+1X4=4 2X4=8 3X4=12 4X4=16
+1X5=5 2X5=10 3X5=15 4X5=20 5X5=25
+1X6=6 2X6=12 3X6=18 4X6=24 5X6=30 6X6=36
+1X7=7 2X7=14 3X7=21 4X7=28 5X7=35 6X7=42 7X7=49
+1X8=8 2X8=16 3X8=24 4X8=32 5X8=40 6X8=48 7X8=56 8X8=64
+1X9=9 2X9=18 3X9=27 4X9=36 5X9=45 6X9=54 7X9=63 8X9=72 9X9=81
+</pre></div></article></body></html>
