@@ -235,6 +235,8 @@ echo "never" > /sys/kernel/mm/transparent_hugepage/defrag
 echo "deadline" > /sys/block/sda/queue/scheduler
 EOF
 
+chmod +x /etc/rc.d/rc.local
+
 sysctl -p
 
 sed -i -r '/vmlinuz-2.6.32/s#(.*)#\1 numa=off#g' /boot/grub/grub.conf
