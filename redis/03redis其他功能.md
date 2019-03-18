@@ -1,110 +1,131 @@
-### api的理解和使用
+# redis其他功能
 
-#### 全局命令
+### 慢查询日志
 
-- `keys *` 查看所有键
-- `set hello world` 字符串类型的键值对
+- slowlog get 查询慢日志
+- slowlog len 当前长度
+- slowlog reset 重置
+- slowlog-max-len 默认长度为128，建议设置为1000以上
+- slowlog-log-slower-than 默认时间为10ms，建议设置为1ms
 
 ```
+config set slowlog-log-slower-than 1000
+config set slowlog-max-len 1000
+config rewrite
+```
+
+- slowlog get 队列持久化到mysql中
+
+### redis shell
+
+#### redis-cli
+
+- -h 主机 -p 端口 -a 密码
+- -r  3 重复
+- -i 3 间隔
+
+```shell
+[root@redis ~]# redis-cli -r 3 -i 1 info|grep used_memory_human
+used_memory_human:794.24K
+used_memory_human:794.24K
+used_memory_human:794.24K
+```
+
+- -x 标准输入
+- -c cluster
+- --scan --pattern 查询指定模式
+- --bigkeys 大键
+- --latency 延迟
+- --stat 统计
+
+#### redis-benchmark
+
+- -r随机插入键
+- 默认-c 50个用户
+- -n 请求数
+- -t 限制命令
+- -P pipeline
+- -q 静默
+- 测试redis性能
+
+```
+[root@redis ~]# redis-benchmark -r 1000000 -n 2000000 -t get,set,lpush,lpop -P 16 -q
+SET: 641025.69 requests per second
+GET: 1005025.12 requests per second
+LPUSH: 1079913.62 requests per second
+LPOP: 1145475.38 requests per second
+
 [root@redis ~]# redis-cli 
-127.0.0.1:6379> ping
-PONG
-127.0.0.1:6379> keys *
-(empty list or set)
-127.0.0.1:6379> set hello world
-OK
-127.0.0.1:6379> set java jedis
-OK
-127.0.0.1:6379> set python redis-py
-OK
-127.0.0.1:6379> keys *
-1) "python"
-2) "hello"
-3) "java"
-```
-
-- dbsize 查看总键值对个数，时间复杂度低
-- keys \* 遍历，时间复杂度高，生产环境禁止使用
-
-```
-127.0.0.1:6379> rpush mylist a b c d e f g
-(integer) 7
-127.0.0.1:6379> keys *
-1) "python"
-2) "hello"
-3) "mylist"
-4) "java"
 127.0.0.1:6379> dbsize
-(integer) 4
-```
-
-- exists KEY 是否存在一个键 存在返回1 不存在返回0
-- del KEY 删除键 返回删除的个数 不存在返回0
-
-```
-127.0.0.1:6379> del python
-(integer) 1
-127.0.0.1:6379> del hello mylist
-(integer) 2
-127.0.0.1:6379> exists python
-(integer) 0
-```
-
-- expire KEY SECONDS 设置键的过期时间 成功为1，不成功为0
-- ttl KEY 查询过期时间 -1 没有设置 -2 键不存在
-
-```
-127.0.0.1:6379> ttl java
-(integer) -1
-127.0.0.1:6379> expire java 3
-(integer) 1
-127.0.0.1:6379> ttl java
-(integer) 1
-127.0.0.1:6379> ttl java
-(integer) -2
-```
-
-- type 查看数据类型
-
-```
-127.0.0.1:6379> type no-exist
-none
-127.0.0.1:6379> set hello world
+(integer) 864578
+127.0.0.1:6379> flushdb
 OK
-127.0.0.1:6379> type hello
-string
-127.0.0.1:6379> rpush mylist a b c d
-(integer) 4
-127.0.0.1:6379> type mylist
-list
+127.0.0.1:6379> dbsize
+(integer) 0
+127.0.0.1:6379> exit
+[root@redis ~]# redis-benchmark -r 1000000 -n 2000000 -t get,set,lpush,lpop -q
+SET: 145836.38 requests per second
+GET: 141083.53 requests per second
+LPUSH: 141974.88 requests per second
+LPOP: 142460.30 requests per second
+
+[root@redis ~]# redis-cli 
+127.0.0.1:6379> flushdb
+OK
+127.0.0.1:6379> dbsize
+(integer) 0
+127.0.0.1:6379> exit
 ```
 
-- object encoding查看数据结构的内部编码
 
-```
-127.0.0.1:6379> object encoding mylist
-"quicklist"
-127.0.0.1:6379> object encoding hello
-"embstr"
-```
+### redis pipeline
 
-### 字符串
+- redis瓶颈网络 
+- 将多条命令合并为一条
+- redis-cli --pipe
 
-- 设置 set key value (ex seconds)|(px milliseconds) (nx)|(xx)
-- ex px 过期时间
-- 默认键不存在添加，键存在更新
-- nx 键不存在才可添加成功 只添加 setnx 
-- xx 键存在才可添加成功 只更新 setxx
-- get key 获取值 不存在返回 nil
-- mset key value key value 批量设置
-- mget key key 批量获取
-- 批量操作有助于客户端节省网络时间
-- incr 自增计数
-- append 追加字符串
-- strlen 字符串长度
-- getset 设置值的同时返回原来的值
-- setrange 截取
-- getrange 截取
+### 事务
+
+- watch乐观锁
+- multi 事务开始
+- exec 执行
+- discard撤销
+
+### lua脚本
+
+- redis-cli --eval LUA脚本 
+- eval evalsha
+- script kill 杀掉脚本
+- 原子性
+
+### bitmap
+
+- 节省内存空间
+- 使用场景：是否在线 活跃用户
+- setbit 设置
+- getbit 获取
+- bitop 操作
+
+### hyperloglog
+
+- 节省内存空间
+- 基数统计
+- 有错误 记录总数 ip uv计算
+
+### pub/sub 发布订阅
+
+- publish 发布
+- subscribe 订阅
+- psubscribe 模式订阅
+- unsubscribe 退订
+- punsubscribe 模式退订
+- 无法持久化
+- 应用场景：聊天室
+
+### geo 
+
+- 地理位置数据
+- geoadd 
 
 ### 持久化
 
@@ -116,6 +137,7 @@ list
 - 主写
 - 从读
 - 发布 订阅 消息队列
+
 
 ### 3.0
 
