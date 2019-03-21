@@ -249,6 +249,7 @@ hash
 - keys 会阻塞 使用scan
 - scan hscan sscan zscan 
 - cursor游标
+- scan 0 match * count 10
 - 新增键可以没有遍历到
 
 ### 数据库管理
@@ -259,8 +260,9 @@ hash
 
 ```
 Redis提供了非常简单且有效的方法，直接在配置文件中设置禁用这些命令。设置非常简单，如下
-
-rename-command FLUSHALL ""
-rename-command FLUSHDB ""
 rename-command KEYS ""
+rename-command MONITOR ""
+rename-command HGETALL ""
 ```
+
+- 如果rename flushall 会导致aof主从复制问题
