@@ -77,7 +77,7 @@ cat > /etc/sysctl.conf << EOF
 # Use '/sbin/sysctl -a' to list all possible parameters.
 
 #最大限度使用物理内存
-vm.swappiness = 0
+vm.swappiness = 1
 #内核立即分配物理内存
 vm.overcommit_memory = 1
 #关闭numa
