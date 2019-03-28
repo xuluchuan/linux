@@ -165,8 +165,10 @@ Status: Downloaded newer image for nginx:1.14.2-alpine
 [root@docker ~]# docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ```
-    + docker container create 创建容器
-    + docker container start 启动 stop 结束 kill 强行停止 run 创建并启动 rm 删除 pause 暂停 unpause 取消暂停 top 查看 ls 显示正在运行的 ls -a 显示全部
+
+- docker container create 创建容器
+- docker container start 启动 stop 结束 kill 强行停止 run 创建并启动 rm 删除 pause 暂停 unpause 取消暂停 top 查看 ls 显示正在运行的 ls -a 显示全部
+
 - docker network ls 查看网络，默认bridge
 
 ```
