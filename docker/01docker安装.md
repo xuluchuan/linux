@@ -83,7 +83,7 @@
 - 清华大学 docker ce docker-ce.repo
 - 复制查找替换为清华大学源
 
-```
+```shell
 [root@docker ~]# wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo 
 [root@docker ~]# sed -i 's+download.docker.com+mirrors.tuna.tsinghua.edu.cn/docker-ce+' /etc/yum.repos.d/docker-ce.repo
 [root@docker ~]# yum -y install docker-ce
@@ -92,12 +92,14 @@
 - 配置文件：/etc/docker/daemon.json
 - 镜像加速器：官方 docker-cn 阿里云
 - daemon.json 
+- docker-cn镜像加速器
 
-``` json
+```json
 {
     "registry-mirrors": ["https://registry.docker-cn.com"]
 }
 ```
+
 
 ```
 [root@docker ~]# mkdir /etc/docker/
@@ -109,4 +111,17 @@
 [root@docker ~]# systemctl enable docker.service
 [root@docker2 ~]# docker -v
 Docker version 18.09.3, build 774a1f4
+```
+
+- 修改为阿里云镜像加速器
+
+```json
+{
+    "registry-mirrors": ["https://ce8l01g3.mirror.aliyuncs.com"]
+}
+```
+
+```shell
+systemctl daemon-reload
+systemctl restart docker
 ```
