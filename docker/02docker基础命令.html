@@ -1201,7 +1201,7 @@ Status: Downloaded newer image for busybox:latest
 <ul>
 <li>docker image rm 删除镜像</li>
 </ul>
-<p><div class="codehilite"><pre>[root@docker ~]# docker image rm c5b6f731fbc0
+<div class="codehilite"><pre>[root@docker ~]# docker image rm c5b6f731fbc0
 Untagged: nginx:1.14.2-alpine
 Untagged: nginx@sha256:e3f77f7f4a6bb5e7820e013fa60b96602b34f5704e796cfd94b561ae73adcf96
 Deleted: sha256:c5b6f731fbc07a20c352256b94891c178e687910dd3fd5318c7bb0b6f6962780
@@ -1221,9 +1221,16 @@ Status: Downloaded newer image for nginx:1.14.2-alpine
 [root@docker ~]# docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 </pre></div>
-    + docker container create 创建容器
-    + docker container start 启动 stop 结束 kill 强行停止 run 创建并启动 rm 删除 pause 暂停 unpause 取消暂停 top 查看 ls 显示正在运行的 ls -a 显示全部
-- docker network ls 查看网络，默认bridge</p>
+
+<ul>
+<li>docker container create 创建容器</li>
+<li>
+<p>docker container start 启动 stop 结束 kill 强行停止 run 创建并启动 rm 删除 pause 暂停 unpause 取消暂停 top 查看 ls 显示正在运行的 ls -a 显示全部</p>
+</li>
+<li>
+<p>docker network ls 查看网络，默认bridge</p>
+</li>
+</ul>
 <div class="codehilite"><pre>[root@docker ~]# docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
 71803242b3d0        bridge              bridge              local
